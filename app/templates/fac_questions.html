@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A simple web page that designs guide RNA strands for the Cas9 protein" />
+    <title>CRISPy - Preguntas frecuentes</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='assets/favicon.ico')}}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='assets/Logos/Logo1.png')}}" alt="Logotipo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="{{url_for('instructions')}}">Instrucciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('fac')}}">Preguntas
+                            frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('blog')}}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('static/assets/img/lab.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1>¿Aún tienes dudas?</h1>
+                        <span class="subheading">Quizá nuestra sección de preguntas frecuentes pueda ayudarte.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="accordion accordion-flush" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Qué tan preciso es el algoritmo para identificar sitios guiados óptimos?   
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            De acuerdo a nuestras evaluaciones teóricas, el sistema tiene una precisión promedio global de 89.67% considerando métricas como ausencia de estructuras secundarias interferentes, energía libre de las cadenas y localización de los tramos apareados. Esto representa una mejora sustancial respecto a los métodos manuales convencionales.
+                            <br>
+                            <br>
+                            Sin embargo, es importante mencionar que la precisión reportada es un promedio de 3 casos particulares, para los cuales se muestra su precisión a continuación:
+                            <br>
+                            <br>
+                            • 83.77% (Longitud del tramo apareado) <br>
+                            • 86.33% (Localización de la estructura) <br>
+                            • 98.90% (Energía libre) <br>
+                            <br>
+                            La primera se refiere al número de bases nitrogenadas que se presentan en los diferentes
+                            apareamientos de las cadenas. La segunda tomando en cuenta si estos apareamientos se encuentran
+                            en las últimas 12 pocisiones al final de la cadena, y la tercera considerando la energía libre que se encuentra en cada una de las estructuras.
+                            <br>
+                            <br>
+                            Por lo tanto, hay que aclarar que si a un especialista en genética, está interesado por un parámetro más que por
+                            otro, siempre puede tomar alguna de las 3 precisiones anteriormente reportadas. Por ejemplo, si a
+                            un especialista en genética le interesa más la energía libre de las cadenas, puede optar por
+                            considerar que el sistema cuenta con un 98.90% de precisión. Sin embargo, si le interesa más considerar la formación de plegamientos en la estructura secundaria de las
+                            cadenas, podría concluir que el sistema tiene un 83.77% de precisión y optar nuestra herramienta,
+                            o en dado caso, alguna otra.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            ¿A qué se refieren con la "longitud del tramo apareado" al evaluar posibles estructuras secundarias problemáticas?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Cuando decimos “tramo apareado” en una estructura secundaria de ARN, nos referimos a una región donde hay apareamiento o complementariedad entre bases.
+
+                            Específicamente, cuando dos segmentos de la misma cadena de ARN tienen secuencias que pueden unirse entre sí mediante enlaces de hidrógeno (A con U, C con G). Esto permite que la cadena de ARN se pliegue sobre sí misma. <br> <br>
+                            
+                            Por ejemplo, si una región del ARN guía tiene la secuencia: <br> <br>
+                            5’-AAGCUC-3’ <br> <br>
+                            Y en otra región de la misma molécula se encuentra la secuencia complementaria: <br> <br>
+                            
+                            3’-UUCGAG-5’ <br> <br>
+                            
+                            Esas dos regiones se pueden aparear entre sí: <br> <br>
+                            
+                            5’-AAGCUC-3’<br>
+                            3’-UUCGAG-5’ <br> <br>
+                            
+                            Originando así una estructura donde esos nucleótidos están plegados uno sobre otro mediante enlaces de hidrógeno entre las bases complementarias.
+                            
+                            En general, estructuras de menos de 4 bases apareadas no suelen ocasionar problemas para la unión a Cas9. Pero si hay secuencias complementarias más largas, pueden plegarse sobre sí y obstaculizar la interacción.  
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Se menciona la "localización de la estructura" en la cadena, ¿a qué se refieren específicamente?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Si el tramo apareado involucra los últimos 8-12 nucleótidos en el extremo 3', es especialmente problemático porque esa es la región crucial de reconocimiento por la proteína Cas9.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            ¿Qué significa el concepto "energía libre de la estructura" en el contexto de evaluar ARNs guía?
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Se refiere a la variación de energía o estabilidad termodinámica que presentaría una determinada conformación plegada de la cadena. Si la energía libre de Gibbs (ΔG) posee valores muy negativos, inferior a -5 kcal/mol, implica que dicha estructura sería altamente estable y probable de formarse espontáneamente a temperatura fisiológica, interfieriendo en la funcionalidad buscada del ARN guía.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            El sistema encuentra sitios guía candidatos, pero ¿Requiero validación experimental posterior?
+                        </button>
+                      </h2>
+                      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Sin duda, una vez identificados los sitios guiados tentativos, es imprescindible para cualquier usuario interesado realizar las validaciones experimentales que certifiquen la funcionalidad real de edición del genoma antes de utilizarlas.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            ¿Qué limitaciones posee actualmente el sistema?
+                        </button>
+                      </h2>
+                      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Algunas limitaciones son la imposibilidad de expandir por ahora la lógica a otras proteínas efectoras más allá de Cas9, falta de optimización integral multiobjetivo y espacio para mejorar escalabilidad mediante programación en paralelo. Pero se está trabajando en las siguientes fases para resolver estas restricciones.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            ¿Es posible utilizar las guías generadas para fines clínicos o terapéuticos?
+                        </button>
+                      </h2>
+                      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            No recomendamos utilizar ninguna secuencia diseñada con el sistema para aplicación en humanos sin antes obtener certificaciones estrictas. El uso deliberado en humanos requiere protocolos especializados que están fuera del alcance de esta herramienta.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer-->
+    <footer class="border-top">
+      <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+              <div class="col-md-10 col-lg-8 col-xl-7"></div>
+          </div>
+      </div>
+  </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>

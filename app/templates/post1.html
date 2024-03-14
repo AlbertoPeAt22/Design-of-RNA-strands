@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A simple web page that designs guide RNA strands for the Cas9 protein" />
+    <meta name="author" content="Alejandro Enriquez Rivera" />
+    <title>CRISPy - Funcionamiento de la proteína Cas9</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='assets/Logos/Logo1.png')}}" alt="Logotipo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="{{url_for('instructions')}}">Instrucciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('fac')}}">Preguntas
+                            frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('blog')}}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('static/assets/img/post1.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>Funcionamiento de la proteína Cas9</h1>
+                        <span class="meta">
+                            Publicado                           
+                            el 14 de septiembre de 2023
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p align="justify">La proteína Cas9 es una enzima que forma parte del sistema CRISPR-Cas y se utiliza para editar genes en una amplia variedad de organismos. El funcionamiento de Cas9 se basa en su capacidad para unirse específicamente al ADN y cortar las hebras de la molécula en lugares específicos determinados por su secuencia. Para llevar a cabo esta función, Cas9 requiere una secuencia de guía de ARN (ARNg) que dirige a la proteína hacia el lugar exacto del ADN en el que debe realizar la incisión [1].</p>
+                    <p align="justify">Una vez que el ARNg se ha unido al ADN objetivo, la proteína Cas9 forma un complejo con la hebra de ADN, creando una estructura de tres hebras. Luego, la proteína corta ambas hebras de ADN a través de la actividad de sus dos dominios de corte, conocidos como los dominios HNH y RuvC, respectivamente. El resultado final de la actividad de la proteína Cas9 es una ruptura de doble cadena en el ADN.</p>
+                    <p align="justify">Esta ruptura del ADN activa la respuesta natural de reparación del ADN de la célula huésped, que puede usarse para editar genes. Una forma de hacerlo es introducir un molde de ADN con una secuencia deseada para el ADN que se está reparando, lo que lleva a la inserción de esta secuencia en el lugar de la ruptura. Otra forma es simplemente permitir que la célula repare la ruptura por sí sola, lo que puede dar lugar a la eliminación o inserción de pequeñas secuencias.</p>                    
+                    <p align="justify">
+                        Referencia:                        
+                    </p>
+                    <p align="justify">
+                        [1] Bayer. "España: ¿Qué es la tecnología CRISPR?". [En línea]. Disponible en: https://www.bayer.com/es/es/blog/espana-que-es-la-tecnologia-crispr#:~: text=Cas9%20es%20una%20endonucleasa%20asociada,lugar%20exacto %20de%20la%20mutaci%C3%B3n. [Accedido el 15 de marzo de 2023].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A simple web page that designs guide RNA strands for the Cas9 protein" />
+    <meta name="author" content="Alejandro Enriquez Rivera" />
+    <title>CRISPy - Aplicaciones de la tecnología CRISPR/Cas9</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='assets/Logos/Logo1.png')}}" alt="Logotipo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="{{url_for('instructions')}}">Instrucciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('fac')}}">Preguntas
+                            frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('blog')}}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('static/assets/img/post3.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>Aplicaciones de la tecnología CRISPR/Cas9</h1>                        
+                        <span class="meta">
+                            Publicado                            
+                            el 22 de noviembre de 2023
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p align="justify">La tecnología CRISPR/Cas9 se ha convertido en una herramienta esencial para la edición genética en diversos campos de la biotecnología y la biomedicina. Esta tecnología permite la eliminación, inserción y modificación de secuencias de ADN específicas en diferentes tipos celulares, lo que ha abierto una amplia gama de posibilidades para la investigación y la terapia génica. Los ARN guía diseñados para la proteína Cas9 son cruciales en esta tecnología, ya que dirigen la proteína hacia el sitio de corte específico en el ADN, permitiendo la edición precisa de la secuencia.</p>
+                    <p align="justify">Una de las aplicaciones más comunes de la tecnología CRISPR/Cas9 es la eliminación de genes específicos. Esta aplicación se logra mediante la introducción de una secuencia de ARN guía que dirige la proteína Cas9 hacia el sitio de corte específico en el ADN, lo que resulta en la eliminación de la secuencia génica deseada. Esta técnica se ha utilizado ampliamente en la investigación básica para estudiar el papel de genes específicos en diferentes procesos biológicos, y también se ha utilizado en la terapia génica para tratar enfermedades genéticas.</p>
+                    <p align="justify">Otra aplicación importante de la tecnología CRISPR/Cas9 es la inserción de secuencias de ADN específicas en una posición deseada. Para lograr esto, se pueden diseñar ARN guía que dirijan la proteína Cas9 hacia el sitio de corte específico en el ADN y luego se pueden introducir las secuencias de ADN deseadas para que sean insertadas en ese lugar [1]. Esta técnica se ha utilizado para insertar genes que producen proteínas terapéuticas en células específicas, lo que tiene importantes aplicaciones en la medicina regenerativa.</p>
+                    <p align="justify">Además de estas aplicaciones, la tecnología CRISPR/Cas9 también se ha utilizado para la modificación de secuencias de ADN específicas. Esta aplicación implica la introducción de mutaciones específicas en el ADN mediante la edición precisa de una secuencia. Los ARN guía diseñados para la proteína Cas9 se utilizan para dirigir la proteína hacia el sitio de corte específico en el ADN, y luego se pueden introducir las mutaciones deseadas. Esta técnica tiene aplicaciones en la investigación básica para estudiar la función de proteínas específicas y también tiene implicaciones importantes en la terapia génica para tratar enfermedades genéticas.</p>                    
+                    <h2 class="section-heading">Limitaciones y desafíos de la tecnología CRISPR/Cas9</h2>
+                    <p align="justify">La tecnología CRISPR/Cas9 se ha convertido en una herramienta valiosa para la edición genética en diferentes organismos, incluyendo plantas, animales y humanos. No obstante, como cualquier tecnología, también presenta limitaciones y desafíos importantes que deben ser abordados.</p>
+                    <p align="justify">Uno de los principales desafíos es la eficiencia de la edición fuera del objetivo, es decir, la posibilidad de que la proteína Cas9 y el ARN guía editen secuencias de ADN no deseadas. Aunque se han desarrollado diferentes estrategias para minimizar esta posibilidad, aún es un desafío importante en la tecnología CRISPR/Cas9. Además, también se ha observado que, en algunos casos, la edición en el objetivo puede ser menos eficiente de lo esperado [2].</p>                  
+                    <p align="justify">Otro desafío importante es la posible activación de genes no deseados. La proteína Cas9 puede unirse a secuencias de ADN sin necesidad de cortarlas, lo que puede llevar a la activación de genes no deseados en el genoma. Este fenómeno se ha observado en diferentes experimentos y es un desafío que debe ser abordado en la tecnología CRISPR/Cas9 [2].</p>
+                    <p align="justify">Además, la tecnología CRISPR/Cas9 también presenta otras limitaciones importantes, como la posible inestabilidad del genoma después de la edición, la dificultad para editar secuencias repetitivas de ADN, y la necesidad de entregar los componentes de la tecnología (proteína Cas9 y ARN guía) a las células objetivo.</p>                    
+                    <h2 class="section-heading">Perspectivas futuras de la tecnología CRISPR/Cas9</h2>
+                    <p align="justify">La tecnología CRISPR/Cas9 ha revolucionado la biotecnología y la edición genética en los últimos años, y aunque todavía hay desafíos por enfrentar y oportunidades por explorar, se están desarrollando nuevas herramientas y estrategias para mejorar su eficiencia y precisión. De esta manera, CRISPR/Cas9 se está expandiendo en su potencial para revolucionar la medicina, la agricultura y la biotecnología.</p>
+                    <p align="justify">Uno de los principales desafíos a superar es la mejora de la especificidad de la tecnología CRISPR/Cas9, de manera que se pueda editar solo el gen objetivo sin afectar los genes no deseados. Esto es especialmente importante debido a las posibles implicaciones terapéuticas de la edición genética en humanos [3].</p>
+                    <p align="justify">Además, los investigadores están trabajando en el desarrollo de nuevas herramientas para la edición genética, como la tecnología CRISPR-Cpf1, que utiliza una proteína diferente a Cas9 y puede tener un mejor rendimiento en ciertos contextos. También se están desarrollando enfoques para la edición de epigenética, es decir, la modificación de la expresión génica sin cambiar la secuencia del ADN.</p>
+                    <p align="justify">En el ámbito de la agricultura, la tecnología CRISPR/Cas9 está siendo utilizada para desarrollar variedades de cultivos más resistentes a las enfermedades, más nutritivas y eficientes en el uso de recursos. En biotecnología, esta tecnología se está explorando para desarrollar terapias génicas y de edición de células somáticas, lo que puede tener un impacto significativo en la medicina [3].</p>
+                    <p align="justify">En resumen, la tecnología CRISPR/Cas9 es una herramienta poderosa y en constante evolución que tiene el potencial de transformar la forma en que abordamos muchos problemas en la biología y la medicina. A medida que la investigación continúa, pueden surgir nuevas aplicaciones y oportunidades, lo que hace que sea emocionante seguir de cerca los desarrollos en este campo.</p>
+                    <p align="justify">
+                        Referencias:                        
+                    </p>
+                    <p align="justify">
+                        [1] [20] Abyntek. "Aplicaciones de la tecnología CRISPR". [En línea]. Disponible en: https://www.abyntek.com/aplicaciones-tecnologia-crispr. Accedido el 1 de abril de 2023.
+                    </p>
+                    <p align="justify">
+                        [2] Redalyc. "Avances en la tecnología CRISPR-Cas9". [En línea]. Disponible en: https://www.redalyc.org/articulo.oa?id=87546953009. [Accedido el 4 de abril de 2023].
+                    </p>
+                    <p align="justify">
+                        [3] Sociedad Argentina de Medicina Respiratoria. "Aplicaciones de CRISPR en enfermedades respiratorias". [En línea]. Disponible en: https://www.samer.org.ar/revista/numeros/2018/numero_4/33-37-VOL-33-2018.pdf. [Accedido el 7 de abril de 2023].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>

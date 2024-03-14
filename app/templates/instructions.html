@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A simple web page that designs guide RNA strands for the Cas9 protein" />
+    <meta name="author" content="Alejandro Enriquez Rivera" />
+    <title>CRISPy - Instrucciones</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='assets/Logos/Logo1.png')}}" alt="Logotipo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="{{url_for('instructions')}}">Instrucciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('fac')}}">Preguntas
+                            frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('blog')}}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('static/assets/img/experiments.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="page-heading">
+                        <h1>Instrucciones</h1>
+                        <span class="subheading">¿Dudas sobre cómo utilizar la herramienta?</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content-->
+    <main class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <h1>Video de funcionamiento principal del sistema</h1>
+                    <video width="640" height="480" controls>
+                        <source src="{{url_for('static', filename='assets/Video/Tutorial.mp4')}}" type="video/mp4">                                                
+                    </video>
+                    <h2>Paso 1:</h2>
+                    <p align="justify">Ingresar el nombre del gen o cadena de ADN, las cadenas de ADN, tendran un limite de 3000 nucleótidos.</p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i1.jpg')}}" /></a>
+                    <h2>Paso 2:</h2>
+                    <p align="justify">Esperar a que los resultados aparezcan en pantalla.</p>
+                    <h2>Paso 3:</h2>
+                    <p align="justify">Una vez que los resultados aparezcan en pantalla, se podrán apreciar 3 botones cuyas caracteristicas son las siguientes:</p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i2-1.jpg')}}" /></a>
+                    <p></p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i2-2.png')}}" /></a>
+                    <p align="justify">Descarga: Nos permite descargar los resultados obtenidos en la pagina en un formato PDF</p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i3-1.jpg')}}" /></a>
+                    <p></p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i3-2.jpg')}}" /></a>
+                    <p align="justify">Filtrar por GC: Facilita la filtración de los resultados obtenidos previamente con base en su contenido de GC, los cuales se ordenarán de manera ascendente, clasificándose según el porcentaje de contenido de GC. Además, se proporciona un botón de descarga que permite obtener estos resultados filtrados en un archivo PDF.</p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i3-3.jpg')}}" /></a>
+                    <p align="justify">Filtrar por sitios fuera del objetivo: Facilita la filtración de los resultados obtenidos previamente según sus sitios fuera del objetivo; estos se ordenarán de manera descendente, clasificándose según número de sitios fuera del objetivo. Además, se proporciona un botón de descarga que permite obtener estos resultados filtrados en un archivo PDF.</p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i3-4.jpg')}}" /></a>
+                    <p></p>
+                    <a href="#!"><img class="img-fluid" src="{{url_for('static', filename='assets/img/i3-5.jpg')}}" /></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>

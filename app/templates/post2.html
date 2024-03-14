@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="A simple web page that designs guide RNA strands for the Cas9 protein" />
+    <meta name="author" content="Alejandro Enriquez Rivera" />
+    <title>CRISPy - Diseño de ARN guía para la proteína Cas9</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="{{url_for('index')}}">
+                <img src="{{url_for('static', filename='assets/Logos/Logo1.png')}}" alt="Logotipo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('index')}}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"
+                            href="{{url_for('instructions')}}">Instrucciones</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('fac')}}">Preguntas
+                            frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{{url_for('blog')}}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('static/assets/img/post2.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <div class="post-heading">
+                        <h1>Diseño de ARN guía para la proteína Cas9</h1>                        
+                        <span class="meta">
+                            Publicado                            
+                            el 9 de octubre de 2023
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <p align="justify">El diseño del ARN guía es una de las etapas más importantes en la tecnología CRISPR/Cas9 para la edición genética. La proteína Cas9 necesita un ARN guía específico para dirigirse a una secuencia de ADN objetivo. Por lo tanto, el diseño preciso del ARN guía es crucial para el éxito de la técnica.</p>
+                    <p align="justify">Una de las consideraciones principales en el diseño del ARN guía es la longitud y composición de la secuencia. En general, las secuencias del ARN guía deben tener entre 18 y 23 nucleótidos de longitud y tener una estructura secundaria estable. Además, se recomienda que la secuencia del ARN guía tenga una alta concentración de nucleótidos G y C en la región de unión al ADN objetivo, ya que esto aumenta la estabilidad de la unión ARN-ADN [1].</p>
+                    <p align="justify">Otra consideración importante es la especificidad y eficiencia de la edición. El ARN guía debe ser altamente específico para la secuencia de ADN objetivo y tener una alta tasa de eficiencia de corte. Se han desarrollado varios programas informáticos de diseño de ARN guía, como los mencionados en el capítulo anterior, para ayudar a diseñar secuencias de ARN guía eficientes y específicas para objetivos específicos.</p>
+                    <p align="justify">Además, es importante considerar la presencia de posibles sitios fuera del objetivo (off-target). Se han desarrollado estrategias para minimizar la aparición de off-targets, como la optimización de la especificidad de la secuencia de ARN guía y la utilización de ARN guía más cortos.</p>                    
+                    <h2 class="section-heading">Validación experimental de la eficacia de los ARN guía</h2>
+                    <p align="justify">Para comprobar experimentalmente la eficacia de los ARN guía diseñados, es común realizar ensayos in vitro o in vivo. Los ensayos in vitro se llevan a cabo en entornos controlados en el laboratorio, mientras que los ensayos in vivo se realizan en organismos vivos.</p>
+                    <p align="justify">En los ensayos in vitro, se puede utilizar la técnica de ensayo de actividad de edición de nuclease (NEA) para evaluar la capacidad del ARN guía para cortar el ADN en la ubicación deseada y medir la eficiencia de la edición. También se pueden utilizar técnicas de electroforesis en gel para visualizar y cuantificar los fragmentos de ADN resultantes de la edición [2].</p>
+                    <p align="justify">Por otro lado, los ensayos in vivo se utilizan para evaluar la eficacia de los ARN guía en células y organismos vivos. Los ensayos in vivo pueden incluir la creación de modelos animales transgénicos o la entrega directa de ARN guía a células en cultivo utilizando diferentes métodos, como la transfección o la electroporación. Una vez que se ha entregado el ARN guía, se pueden analizar los efectos de la edición en las células o el organismo, utilizando técnicas como la secuenciación del ADN y la PCR cuantitativa en tiempo real.</p>
+                    <p align="justify">
+                        Referencias:                        
+                    </p>
+                    <p align="justify">
+                        [1] Abyntek. "Cómo diseñar guías para CRISPR". [En línea]. Disponible en: https://www.abyntek.com/como-disenar-guias-para-crispr. [Accedido el 24 de marzo de 2023].
+                    </p>
+                    <p align="justify">
+                        [2] Universidad de A Coruña. "Estudio sobre la aplicación de CRISPR en plantas". [En línea]. Disponible en: https://ruc.udc.es/dspace/bitstream/handle/2183/19673/ PardoPinon_Marta_TFG_2017.pdf.pdf. [Accedido el 27 de marzo de 2023].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- Footer-->
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>
